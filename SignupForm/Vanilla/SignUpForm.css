@@ -1,0 +1,39 @@
+:root{
+    /* COLOURS */
+    --white: #e3e3e3;
+    --black: #3e3e3e;
+    --glass-black: #00000080;
+    --glass-white: #ffffff80;
+    --green: #007700;
+    --red: #cc0000;
+    --yellow: #ddaa00;
+    --orange: #FF4d00;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.wallpaper{
+    height: 100%;
+    width: 100%;
+    position:fixed;
+    z-index: -10;
+    background: var(--white);
+}
+
+.square, .circle, .rectangle, .triangle{
+    background: var(--black);
+}
+
+.square{
+    height: 25vh;
+    width: 25vh;
+}
