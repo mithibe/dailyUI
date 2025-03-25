@@ -213,21 +213,70 @@ input[type='submit']{
 }
 
 /* MOBILE */
-@media only-screen and (max-width: 425px) {
+@media only screen and (max-width: 600px) {
+    html{
+        margin: 0;
+        padding: 0;
+    }
     body{
+        margin: 0;
+        padding: 0;
         height: 100vh;
+        /* border: 2px solid #fff; */
         width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: relative;
     }
 
+    .imageSection{
+        position: absolute;
+        top: 0;
+        height: 20%;
+        width: 100%;
+        /* border: 2px solid #000; */
+    }
+
+    .imageSection img{
+        height: 100px;
+        width: 100px;
+    }
+
+    .imageSection .circle{
+        height: 100px;
+        width: 100px;
+    }
+
     .form{
+        overflow-y: scroll;
         position: absolute;
         width: 100%;
-        height: 70%;
+        height: 80%;
         bottom: 0;
+        background: var(--color-black);
+        border: none;
+        border-top: 2px solid var(--color-border);
+        font-size: 12px;
+        box-shadow: 0 -5px 10px var(--color-shadow);
+    }
+
+    .formSwitch button{
+        height: 30px;
+        width: calc(50% - 20px);
     }
 
     input{
         height: 30px;
+    }
+
+    input[type="checkbox"]{
+        height: 15px;
+        width: 15px;
+    }
+
+    .details{
+        margin-bottom: 30px;
     }
 }
