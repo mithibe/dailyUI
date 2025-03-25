@@ -1,13 +1,16 @@
 :root{
     /* COLOURS */
-    --white: #e3e3e3;
-    --black: #3e3e3e;
-    --glass-black: #00000080;
-    --glass-white: #ffffff80;
-    --green: #007700;
-    --red: #cc0000;
-    --yellow: #ddaa00;
-    --orange: #FF4d00;
+    /* major colours */
+    --color-primary: #c6d728;
+    
+    /* general colours */
+    --color-black: #292929;
+    --color-white: #fafafa;
+    --color-blue: #28a2d7;
+
+    /* component colours */
+    --color-border: #000000;
+    --color-shadow: #00000080;
 }
 
 *{
@@ -16,24 +19,139 @@
     text-decoration: none;
 }
 
-html, body{
+body{
+    position: relative;
     height: 100vh;
     width: 100vw;
+    background: var(--color-black);
+    overflow: hidden;
 }
 
-.wallpaper{
+.shadow{
+    border: 2px solid var(--color-border);
+    box-shadow: -5px 0 10px var(--color-shadow);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+fieldset{
+    border: none;
+}
+
+legend{
+    display: none;
+}
+
+.formSwitch{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.formSwitch button{
+    height: 48px;
+    width: 160px;
+}
+
+/* FORM */
+.form{
     height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    color: var(--color-white);
+    font-size: 20px;
+}
+.formSwitch{
+    position: relative;
+    height: 10%;
+}
+
+form{
+    position: relative;
+    height: 90%;
     width: 100%;
-    position:fixed;
-    z-index: -10;
-    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.square, .circle, .rectangle, .triangle{
-    background: var(--black);
+.details{
+    max-height: 70%;
+    width: 100%;
+    margin: 0 20px;
+    padding: 0 20px;
 }
 
-.square{
-    height: 25vh;
-    width: 25vh;
+.agreement{
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+}
+
+.input{
+    display:flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.details input{
+    height: 40px;
+    padding: 0 10px;
+    background: var(--color-black);
+    color: var(--color-white);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+input[type='checkbox']{
+    margin: 0 20px;
+    height: 20px;
+    width: 20px;
+    background: var(--color-black);
+    accent-color: var(--color-primary);
+}
+
+input[type='submit']{
+    height: 50px;
+    width: 200px;
+    background: var(--color-primary);
+    transition: 300ms ease;
+    -webkit-transition: 300ms ease;
+    -moz-transition: 300ms ease;
+    -ms-transition: 300ms ease;
+    -o-transition: 300ms ease;
+}
+
+.signup{
+    background: var(--color-primary);
+    transition: 300ms ease;
+    -webkit-transition: 300ms ease;
+    -moz-transition: 300ms ease;
+    -ms-transition: 300ms ease;
+    -o-transition: 300ms ease;
+}
+
+.login{
+    background: var(--color-blue);
+    transition: 300ms ease;
+    -webkit-transition: 300ms ease;
+    -moz-transition: 300ms ease;
+    -ms-transition: 300ms ease;
+    -o-transition: 300ms ease;
+}
+
+.signup:hover, input[type='submit']:hover{
+    box-shadow: 0 0 10px var(--color-primary);
+    border: 2px solid var(--color-white);
+}
+
+.login:hover{
+    box-shadow: 0 0 10px var(--color-blue);
+    border: 2px solid var(--color-white);
 }
