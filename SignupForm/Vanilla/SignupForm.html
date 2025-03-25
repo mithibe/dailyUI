@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Form</title>
     <link rel="stylesheet" href="SignUpForm.css">
+    <script src="SignupForm.js" defer></script>
 </head>
 <body>
+    <div class="imageSection">
+        <img src="./assets/images/svg/IrushLogo.svg" alt="">
+        <div class="circle"></div>
+    </div>
     <div class="form shadow">
         <div class="formSwitch">
-            <button class="shadow signup">Signup Form</button>
-            <button class="shadow login">Login Form</button>
+            <button class="shadow signup" id="signupForm-btn">Signup Form</button>
+            <button class="shadow login" id="loginForm-btn">Login Form</button>
         </div>
-        <form action="">
+        <form class="signupForm" id="signupForm" action="">
             <fieldset class="details">
                 <legend>Details</legend>
                 <div class="input">
@@ -29,7 +34,7 @@
                 </div>
                 <div class="input">
                     <label for="createPassword">Create Password</label>
-                    <input class="shadow" type="password" name="createPassword" id="createPassword" required>
+                    <input class="shadow" type="password" name="createPassword" id="createPassword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter and at least 8 or more characters">
                 </div>
                 <div class="input">
                     <label for="confirmPassword">Confirm Password</label>
@@ -38,11 +43,25 @@
             </fieldset>
             <fieldset class="agreement">
                 <legend>Terms and conditions</legend>
-                <input class="shadow" type="checkbox" name="userAgreement" id="userAgreement">
+                <input class="shadow" type="checkbox" name="userAgreement" id="userAgreement" required>
                 <label for="userAgreement">Agree to terms and conditions</label>
             </fieldset>
 
             <input class="shadow" type="submit" value="Register">
+        </form>
+
+        <form class="loginForm" id="loginForm" action="">
+            <fieldset class="details">
+                <div class="input">
+                    <label for="email">Email</label>
+                    <input class="shadow" type="email" name="email" id="email">
+                </div>
+                <div class="input">
+                    <label for="password">Password</label>
+                    <input class="shadow" type="password" name="password" id="password">
+                </div>
+            </fieldset>
+            <input class="shadow" type="submit" value="Login">
         </form>
     </div>
 </body>
