@@ -1,0 +1,173 @@
+@import url('../../Base.css');
+
+:root{
+    /* COLOURS */
+    /* major colours */
+    --color-primary: #c6d728;
+    
+    /* general colours */
+    --color-black: #292929;
+    --color-white: #fafafa;
+    --color-blue: #28a2d7;
+    --color-red: #D72828;
+
+    /* component colours */
+    --color-border: #000000;
+    --color-shadow: #00000080;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.shadow{
+    border: 2px solid var(--color-border);
+    box-shadow: -5px 0 10px var(--color-shadow);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.checkout{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    border: 2px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.checkout h1{
+    position: absolute;
+    top: 20px;
+    /* left: 20px; */
+}
+
+.modeOfPayment{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 10px;
+}
+
+.modeOfPayment button{
+    height: 48px;
+    width: 160px;
+    background: var(--color-primary);
+}
+
+.cardDetails{
+    height: 300px;
+    width: 500px;
+    border: 2px solid var(--color-border);
+    display: flex;
+}
+
+form{
+    display: grid;
+    grid:
+    "name name name name"1fr
+    "cardno cardno cardno cardno" 1fr
+    "exp exp cvv cvv"1fr
+    /1fr 1fr 1fr 1fr;
+    gap: 8px;
+    height: 100%;
+    max-width: 80%;
+}
+
+.chip{
+    height: 100%;
+    width: 20%;
+    background: var(--color-primary);
+    border-radius: 0 8px 8px 0;
+    -webkit-border-radius: 0 8px 8px 0;
+    -moz-border-radius: 0 8px 8px 0;
+    -ms-border-radius: 0 8px 8px 0;
+    -o-border-radius: 0 8px 8px 0;
+}
+
+.input{
+    margin: 20px;
+    border-bottom: 2px solid var(--color-white);
+    display: flex;
+    align-items: center;
+}
+.name{
+    grid-area: name;
+}
+
+.cardno{
+    grid-area: cardno;
+}
+.exp{
+    grid-area: exp;
+}
+
+.cvv{
+    grid-area: cvv;
+}
+
+.input input{
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    color: var(--color-white);
+}
+
+.checkoutBtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkoutBtn button{
+    height: 52px;
+    width: 70%;
+    background: var(--color-primary);
+}
+
+.chip{
+    position: relative;
+}
+
+.chipset img{
+    position: absolute;
+    right: 10%;
+    bottom: 30%;
+    width: 70%;
+}
+.items{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.itemCard{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}

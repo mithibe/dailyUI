@@ -1,0 +1,50 @@
+:root{
+    /* COLOURS */
+    /* major colours */
+    --color-primary: #c6d728;
+    
+    /* general colours */
+    --color-black: #292929;
+    --color-white: #fafafa;
+    --color-blue: #28a2d7;
+    --color-red: #D72828;
+
+    /* component colours */
+    --color-border: #000000;
+    --color-shadow: #00000080;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.shadow{
+    border: 2px solid var(--color-border);
+    box-shadow: -5px 0 10px var(--color-shadow);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.glow{
+    transition: 300ms ease;
+    -webkit-transition: 300ms ease;
+    -moz-transition: 300ms ease;
+    -ms-transition: 300ms ease;
+    -o-transition: 300ms ease;
+}
+
+.glow:hover{
+    box-shadow: 0 0 10px var(--color-primary);
+    border: 2px solid var(--color-white);
+}

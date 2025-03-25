@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Checkout</title>
+    <link rel="stylesheet" href="CreditCardCheckout.css">
+</head>
+<body>
+    <div class="items">
+        <div class="itemCard shadow">
+            <h2>Website</h2>
+            <ul>
+                <h4>Features</h4>
+                <li>Login Form</li>
+                <li>Home Page</li>
+                <li>Contact Page</li>
+                <li>Map Integration</li>
+                <li>User Accounts</li>
+            </ul>
+            <h3>Ksh. 90,000</h3>
+        </div>
+        <div class="itemCard shadow">
+            <h2>Hosting</h2>
+            <ul>
+                <h4>Features</h4>
+                <li>Emails</li>
+                <li>Storage</li>
+                <li>Domain Name</li>
+            </ul>
+            <h3>Ksh. 10,000</h3>
+        </div>
+    </div>
+    <div class="checkout shadow">
+        <h1>Card Details</h1>
+        <div class="modeOfPayment">
+            <button class="shadow glow">M-PESA</button>
+            <button class="shadow glow">PAYPAL</button>
+            <button class="shadow glow">CARD</button>
+        </div>
+        <div class="cardDetails shadow">
+            <form action="">
+                <div class="input name">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="input cardno">
+                    <label for="cardNumber">Card No:</label>
+                    <input type="text" name="cardNumber" id="cardNumber">
+                </div>
+                <div class="input exp">
+                    <label for="expiryDate">Exp Date:</label>
+                    <input type="text" name="expiryDate" id="expiryDate">
+                </div>
+                <div class="input cvv">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" name="cvv" id="cvv">
+                </div>
+            </form>
+            <div class="chip">
+                <div class="chipset">
+                    <img src="../../Assets/svg/chipset.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="total">
+            <h3>Total: Ksh. 100,000</h3>
+        </div>
+        <div class="checkoutBtn">
+            <button class="shadow glow">CHECKOUT</button>
+        </div>
+    </div>
+</body>
+</html>
